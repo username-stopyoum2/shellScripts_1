@@ -22,7 +22,7 @@ if [ "${1}" == '-a' ] || [ "${1}" == '--append-install' ]; then
 	done
 fi
 
-list=("wget" "net-tools" "bash-completion" "update")
+list=("curl" "wget" "net-tools" "bash-completion" "update" "git")
 
 echo -e "기본 패키지 리스트 : \n\n\t""${list[*]}"
 echo -e "기본 패키지들을 설치 하시겠습니까?( y | n ) : "
