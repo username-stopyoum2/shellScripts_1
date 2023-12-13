@@ -6,7 +6,7 @@ installed=`rpm -qa ${1}`
 echo -e 'network checking..'
 ping -c 2 8.8.8.8 1>/dev/null && {
 	[ "${installed}" != "" ] && {
-		echo -e "${1}""가 이미 설치되어 있습니다. 지우시겠습니까? ( y | n) : "
+		printf "${1}""가 이미 설치되어 있습니다. 지우시겠습니까? ( y | n) : "
 		read line
 		[ "${line}" == 'y' ] || [ "${line}" == "yes" ] && {
 			echo -e "removing.. "
@@ -25,7 +25,7 @@ ping -c 2 8.8.8.8 1>/dev/null && {
 
 
 	yum list "${1}" 1>/dev/null && [ "${installed}" == "" ] && {
-		echo -e "${1}""을 설치하시겠습니까? ( y | n )"
+		printf "${1}""을 설치하시겠습니까? ( y | n ) : "
 		read line;
 		[ "${line}" == 'y' ] || [ "${line}" == "yes" ] && {
 			echo -e "installing.. "

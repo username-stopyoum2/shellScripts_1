@@ -12,8 +12,6 @@ function add_profile_env_var {
 		fi
 	}
 
-
-
 }
 add_profile_env_var \"${PWD}/${0}\"
 " > add_profile_env_var.sh 
